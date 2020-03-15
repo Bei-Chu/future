@@ -9,7 +9,7 @@ public:
   ~Server();
 
   future<int> serve(int input);
-  future<void> serve();
+  future<> serve();
   void update();
 
 private:
@@ -20,5 +20,5 @@ private:
   std::thread thread_;
 
   std::unordered_map<int, promise<int>> promises_;
-  std::optional<promise<void>> void_promise_;
+  std::optional<promise<>> void_promise_;
 };

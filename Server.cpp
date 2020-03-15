@@ -21,11 +21,11 @@ future<int> Server::serve(int input) {
   return promise.get_future();
 }
 
-future<void> Server::serve() {
+future<> Server::serve() {
   if (void_promise_) {
     void_promise_->set_value();
   }
-  void_promise_ = promise<void>();
+  void_promise_ = promise<>();
   return void_promise_->get_future();
 }
 
