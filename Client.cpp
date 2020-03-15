@@ -2,10 +2,6 @@
 #include <iostream>
 #include "Server.h"
 
-void f() {
-
-}
-
 Client::Client(Server &server) : server_(server) {}
 
 void Client::start() {
